@@ -1,0 +1,22 @@
+<p>list works!</p>
+<div>
+    <h1>LISTS</h1>
+    <ul>
+        @for (list of lists; track list) {
+        <li>{{ list.listname }}</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <h1>CREATE List</h1>
+    <textarea [(ngModel)]="this.listname"></textarea>
+    <button mat-flat-button color="primary" (click)="createList()">create list</button>
+</div>
+
+
+<div>
+    <h1>Delete List</h1>
+    <textarea [(ngModel)]="this.listname"></textarea>
+    <button mat-flat-button color="primary" (click)="deleteList()">delete list</button>
+</div>
