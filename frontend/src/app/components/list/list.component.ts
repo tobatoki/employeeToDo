@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewEncapsulation} from '@angular/core';
 import { ListService } from '../../services/list/list.service';
 import { List } from '../../../types';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [FormsModule, MatButtonModule],
   templateUrl: './list.component.html',
-  styleUrl: './list.component.less'
+  styleUrl: './list.component.less',
+  encapsulation:ViewEncapsulation.None,
 })
 export class ListComponent implements OnInit {
   lists: List[] = [];
