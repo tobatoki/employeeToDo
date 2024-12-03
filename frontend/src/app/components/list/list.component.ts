@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class ListComponent implements OnInit {
   lists: List[] = [];
   listname: string = '';
-  listID!: number;
+  listid!: number;
   employeeID!: number;
 
   constructor(private ListService: ListService, private route: ActivatedRoute) {
@@ -41,9 +41,9 @@ export class ListComponent implements OnInit {
   }
 
   deleteList(): void {
-    this.ListService.deleteEmployeeList(this.listname, this.employeeID).subscribe({
+    this.ListService.deleteEmployeeList(this.listid, this.employeeID).subscribe({
       next: (res) => {
-        this.listname = ''
+        this.listid = 0;
         this.ngOnInit();
       },
       error: (err) => console.error('Error creating list:', err),

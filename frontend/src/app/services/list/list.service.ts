@@ -20,10 +20,10 @@ export class ListService {
     return this.httpClient.post<List[]>(`${this.baseApiUrl}/${employeeID}/list`, { listname });
   }
 
-  deleteEmployeeList(listname: string, employeeID: number): Observable<List[]> {
+  deleteEmployeeList(listid: number, employeeID: number): Observable<List[]> {
     return this.httpClient.delete<List[]>(`${this.baseApiUrl}/${employeeID}/list`,
       {
-        body: { listname, employeeID }
+        body: { listid, employeeID }
       });
   }
 }
