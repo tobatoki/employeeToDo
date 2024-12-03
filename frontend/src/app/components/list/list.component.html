@@ -1,22 +1,42 @@
-<p>list works!</p>
-<div>
-    <h1>LISTS</h1>
-    <ul>
-        @for (list of lists; track list) {
-        <li>{{list.listid}}  {{ list.listname }}</li>
-        }
-    </ul>
-</div>
+<body>
+  <section class="todo">
+    <div>
+      <h1>LISTS</h1>
+      <div class="redBtn-container">
+        <ul>
+          @for (list of lists; track list) {
+          <li>{{ list.listid }} {{ list.listname }}</li>
+          }
+        </ul>
+      </div>
+    </div>
 
-        <div class="input">
-            <h1>Create List</h1>
-            <input class="input" type="text" [(ngModel)]="this.listname" class="input-field" placeholder="Enter List"/>
-            <button class="btn" type="button" (click)="createList()">create list</button>
-        </div>
+    <div class="input">
+      <h1>Create List</h1>
+      <input
+        class="input"
+        type="text"
+        [(ngModel)]="this.listname"
+        class="input-field"
+        placeholder="Enter List"
+      />
+      <button class="btn" type="button" (click)="createList()">
+        create list
+      </button>
+    </div>
 
-
-<div>
-    <h1>Delete List</h1>
-    <textarea [(ngModel)]="this.listid"></textarea>
-    <button mat-flat-button color="primary" (click)="deleteList()">delete list</button>
-</div>
+    <div class="input">
+      <h1>Delete List</h1>
+      <input
+        class="input"
+        type="text"
+        [(ngModel)]="this.listid"
+        class="input-field"
+        placeholder="Delete List"
+      />
+      <button class="btn" type="button" (click)="deleteList()">
+        delete list
+      </button>
+    </div>
+  </section>
+</body>
