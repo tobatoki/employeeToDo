@@ -3,7 +3,7 @@
     <h1>LISTS</h1>
     <ul>
         @for (list of lists; track list) {
-        <li>{{ list.listname }}</li>
+        <li>{{list.listid}}  {{ list.listname }}</li>
         }
     </ul>
 </div>
@@ -17,6 +17,6 @@
 
 <div>
     <h1>Delete List</h1>
-    <textarea [(ngModel)]="this.listname"></textarea>
+    <textarea [(ngModel)]="this.listid"></textarea>
     <button mat-flat-button color="primary" (click)="deleteList()">delete list</button>
 </div>
