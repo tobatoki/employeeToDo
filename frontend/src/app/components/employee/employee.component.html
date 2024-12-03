@@ -1,20 +1,26 @@
-<div>
-  <h1>GET LIST</h1>
-  <button mat-flat-button color="primary" (click)="getEmployees()">Employees</button>
-  @for(employee of employees; track employee) {
-  <li (click)="navigateToList(employee.employeeID)">{{employee.employeeID}} {{employee.employeeName}}</li>
-  }
-  <p></p>
-</div>
+<body>
+  <section class="todo">
+    <div>
+      <title>Employee To Do List</title>
+      <div class="redBtn-container">
+      <h1>Get List</h1>
+      <button class="redBtn" (click)="getEmployees()">Employees</button>
+      @for(employee of employees; track employee) {
+      <li (click)="navigateToList(employee.employeeID)">{{employee.employeeID}} {{employee.employeeName}}</li>
+      }
+    </div>
+    </div>
 
-<div>
-  <h1>CREATE Employee</h1>
-  <textarea [(ngModel)]="this.employeeName"></textarea>
-  <button type="button" (click)="createEmployee()">create employee</button>
-</div>
+    <div class="input">
+      <h1 class="createEmpl">Create Employee</h1>
+      <input class="input" type="text" [(ngModel)]="this.employeeName" class="input-field" placeholder="Enter Employee Name"/>
+      <button class="btn" type="button" (click)="createEmployee()">Create Employee</button>
+    </div>
 
-<div>
-  <h1>delete Employee</h1>
-  <textarea [(ngModel)]="this.employeeID"></textarea>
-  <button type="button" (click)="deleteEmployee()">delete employee</button>
-</div>
+    <div class="input">
+      <h1 class="deleteEmpl">Delete Employee</h1>
+      <input class="input" type="text" [(ngModel)]="this.employeeID" class="input-field" placeholder="Enter Employee ID"/>
+      <button class="btn" type="button" (click)="deleteEmployee()">Delete Employee</button>
+    </div>
+  </section>
+</body>

@@ -1,0 +1,114 @@
+:root {
+    --gradient: linear-gradient(
+    180deg,
+    rgba(45, 112, 125, 0.73) 0%,
+    #163e92 100%
+);
+
+    --dark:#001747;
+    --grey:#b1bacb;
+    --grey-border: rgba(210,210,210,0.75);
+    --grey-light:#eeeeee;
+    --grey-dark: #405175;
+    --blue: #2d70fd;
+    --green: #00d8a7;
+    --white: #ffffff;
+
+}
+
+body{
+    background-color: var(--grey);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: var(--blue);
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.redBtn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.redBtn {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgb(255, 145, 0);
+    border: none;
+}
+
+h1,p{
+    margin: 0;
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background: var(--white);
+    padding: 8rem;
+    height: 50%;
+    width: 100%;
+    box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+    max-width: 35rem;
+}
+
+h1{
+    text-transform: uppercase;
+    height: 3rem;
+    color: var(--dark);
+    text-align: center;
+}
+
+.input{
+    position: relative;
+    display: flex;
+}
+
+.input-field{
+    width: 100%;
+    border: 0.06rem solid #d2d2d2bf;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+textarea::placeholder {
+    color: var(--grey);
+}
+
+ul{
+    padding: 0;
+    margin:0;
+}
+
+li {
+    padding: 0.3rem 0.5rem;
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: var(--green);
+    border: none;
+    margin-bottom: 1rem;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { EmployeeService } from '../../services/employee/employee.service';
 import { Employees } from '../../../types';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
   standalone: true,
   imports: [FormsModule, MatButtonModule],
   templateUrl: './employee.component.html',
-  styleUrl: './employee.component.less'
+  styleUrl: './employee.component.less',
+  encapsulation:ViewEncapsulation.None,
 })
 
 export class EmployeeComponent {
